@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+.BMO {
+  height: 400px;
+  margin-bottom: 70px;
+}
+
+.wisdom {
+  height: fit-content;
+  border-style: solid;
+  width: max-content;
+}
+
+.resources {
+  height: fit-content;
+  border-style: solid;
+  width: max-content;
+}
+
+.meme {
+  height: fit-content;
+  border-style: solid;
+  width: max-content;
+}
+
+.top-container {
+  height: max-content;
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bmochatbox {
+  width: -webkit-fill-available;
+}
+
+.bmochatbox__container {
+  margin-bottom: 10px;
+}
+
+.title {
+  justify-self: flex-start;
+  display: flex;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 90px;
+  color: white;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  text-shadow: -0.4px 0 0 #fdff2a, -1px 0 0 #df4a42, 1px 0 0 #91fcfe,
+    1px 0 0 #4405fc;
+  animation: blink 1s steps(4, start) infinite;
+
+  // @keyframes blink;
+  // visibility: hidden;
+}

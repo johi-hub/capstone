@@ -1,0 +1,9 @@
+@use "./partials/partials" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+@font-face {
+  font-family: "Pacifico", cursive;
+  src: url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap")
+    format("opentype");
+}

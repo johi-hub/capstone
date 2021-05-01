@@ -1,0 +1,54 @@
+* {
+  box-sizing: none;
+}
+
+.homepage {
+  display: flex;
+  justify-content: center;
+  background-image: url("../src/assets/clouds.jpeg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+}
+
+.right {
+  display: flex;
+  align-items: flex-end;
+}
+
+.chatbox-container {
+  width: -webkit-fill-available;
+}
+
+.memeimg {
+  width: 50;
+  position: absolute;
+  top: 10%;
+  left: 35%;
+  width: 31%;
+  border-radius: 20px;
+}
+
+.wisdomText {
+  color: #825e60;
+}
+
+.wisdomText_container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.messages {
+  height: 75vh;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px;
+}
