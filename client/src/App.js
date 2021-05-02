@@ -14,10 +14,6 @@ const LoginForm = Userfront.build({
   toolId: "ldkoaa",
 });
 
-const LogoutButton = Userfront.build({
-  toolId: "naornr",
-});
-
 require("dotenv").config();
 
 export default class App extends Component {
@@ -60,12 +56,10 @@ export default class App extends Component {
                   handleMeme={this.handleMeme}
                   wisdom={this.state.wisdom}
                   meme={this.state.meme}
-                  logoutButton={LogoutButton}
                 />
               )}
             />
             <Route exact path="/login" component={LoginForm} />
-            {/* <ProtectedRoute exact path="/" render={()=> <><StruggleBot handleWisdom={this.handleWisdom} handleMeme={this.handleMeme}/><DisplayPage wisdom={this.state.wisdom} meme={this.state.meme}/> <ChatBox/></>}/> */}
           </Switch>
         </Router>
       </div>
