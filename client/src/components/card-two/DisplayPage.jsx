@@ -1,6 +1,6 @@
 import React from "react";
 
-function DisplayPage({ wisdom, meme, recepie }) {
+function DisplayPage({ wisdom, meme }) {
   return (
     <>
       <div className="container">
@@ -12,14 +12,6 @@ function DisplayPage({ wisdom, meme, recepie }) {
           src={
             meme?.data?.memes[
               Math.floor(Math.random() * meme?.data?.memes.length)
-            ].url
-          }
-        />
-        <img
-          className="recepeimg"
-          src={
-            recepie?.data?.recepies[
-              Math.floor(Math.random() * recepie?.data?.recepies.length)
             ].url
           }
         />

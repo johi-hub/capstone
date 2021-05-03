@@ -3,22 +3,11 @@ import StruggleBot from "../card-one/StruggleBot";
 import DisplayPage from "../card-two/DisplayPage";
 import ChatBox from "../card-three/ChatBox";
 
-function Homepage({
-  handleWisdom,
-  handleMeme,
-  wisdom,
-  meme,
-  handleRecepie,
-  recepie,
-}) {
+function Homepage({ handleWisdom, handleMeme, wisdom, meme }) {
   return (
     <>
-      <StruggleBot
-        handleWisdom={handleWisdom}
-        handleMeme={handleMeme}
-        handleRecepie={handleRecepie}
-      />
-      <DisplayPage wisdom={wisdom} meme={meme} recepie={recepie} />
+      <StruggleBot handleWisdom={handleWisdom} handleMeme={handleMeme} />
+      <DisplayPage wisdom={wisdom} meme={meme} />
       <ChatBox />
     </>
   );

@@ -17,7 +17,6 @@ export default class App extends Component {
   state = {
     meme: [],
     wisdom: [],
-    recepie: [],
   };
 
   handleWisdom = () => {
@@ -25,7 +24,6 @@ export default class App extends Component {
       this.setState({
         wisdom: res.data,
         meme: [],
-        recepie: [],
       });
       console.log(this.state.wisdom);
     });
@@ -36,25 +34,9 @@ export default class App extends Component {
       this.setState({
         meme: res.data,
         wisdom: [],
-        recepie: [],
       });
       console.log(this.state.meme);
     });
-  };
-
-  handleRecepie = () => {
-    axios
-      .get(
-        "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/visualizeRecipe"
-      )
-      .then((res) => {
-        this.setState({
-          recepie: res.data,
-          wisdom: [],
-          meme: [],
-        });
-        console.log(this.state.recepies);
-      });
   };
 
   render() {
@@ -71,8 +53,6 @@ export default class App extends Component {
                   handleMeme={this.handleMeme}
                   wisdom={this.state.wisdom}
                   meme={this.state.meme}
-                  handleRecepie={this.handleRecepie}
-                  recepie={this.state.recepie}
                 />
               )}
             />
