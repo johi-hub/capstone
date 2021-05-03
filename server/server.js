@@ -6,9 +6,10 @@ const path = require("path");
 const fs = require("fs");
 
 const pathURL = "./data/memes.json";
-const botRoute = require("./routes/botroute");
+
 app.use(express.json());
 app.use(cors());
+const botRoute = require("./routes/botroute");
 app.use("/bot", botRoute);
 
 if (process.env.NODE_ENV !== "production") {
@@ -18,7 +19,7 @@ if (process.env.NODE_ENV !== "production") {
 const http = require("http").createServer(app);
 const io = require("socket.io")(http, {
   cors: {
-    origin: true,
+    origin: "*",
     methods: ["GET", "POST"],
   },
 });
