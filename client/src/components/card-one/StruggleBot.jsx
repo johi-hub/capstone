@@ -53,12 +53,7 @@ const StruggleBot = ({ handleWisdom, handleMeme }) => {
           </form>
         </div>
         <div className="button-container">
-          <button
-            className="resources"
-            // onClick={handleResources}
-          >
-            resources
-          </button>
+          <button className="resources">resources</button>
           <button className="wisdom" onClick={handleWisdom}>
             wisdom 🧙
           </button>
@@ -69,7 +64,6 @@ const StruggleBot = ({ handleWisdom, handleMeme }) => {
         <button className="logoutbutton" onClick={logout}>
           Log Out
         </button>
-        {/* <LogoutButton className="logoutbutton" /> */}
       </div>
     </div>
   );

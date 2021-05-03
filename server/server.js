@@ -15,8 +15,6 @@ if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
 }
 
-// New code below...
-
 const http = require("http").createServer(app);
 const io = require("socket.io")(http, {
   cors: {
@@ -49,7 +47,6 @@ app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   next();
 });
-// this is important. If not we will not be able to transmit data across our server
 
 io.on("connection", (socket) => {
   console.log("a user is connected", socket.id);
@@ -63,7 +60,6 @@ io.on("connection", (socket) => {
   });
 });
 
-// Change app.listen to http.listen
 http.listen(port, () => {
   console.log(`API listening on port ${port}...`);
 });
