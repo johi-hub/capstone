@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import "./App.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "./components/homepage/homepage";
@@ -13,20 +13,17 @@ const LoginForm = Userfront.build({
 
 require("dotenv").config();
 
+// useEffect(() => {
+//   const callWisdomAPI = async() => {
+//     const res = await axios.get('/api/wisdom');
+//     setWisdom(res.data);
+// };
+//   callWisdomAPI();
+// }
 export default class App extends Component {
   state = {
     meme: [],
     wisdom: [],
-  };
-
-  handleWisdom = () => {
-    axios.get("https://zenquotes.io/api/random").then((res) => {
-      this.setState({
-        wisdom: res.data,
-        meme: [],
-      });
-      console.log(this.state.wisdom);
-    });
   };
 
   handleMeme = () => {
@@ -36,6 +33,16 @@ export default class App extends Component {
         wisdom: [],
       });
       console.log(this.state.meme);
+    });
+  };
+
+  callWisdomAPI = () => {
+    axios.get("/api/wisdom").then((res) => {
+      this.setState({
+        wisdom: res.data,
+        meme: [],
+      });
+      console.log(this.state.wisdom);
     });
   };
 
@@ -49,7 +56,7 @@ export default class App extends Component {
               path="/"
               render={() => (
                 <HomePage
-                  handleWisdom={this.handleWisdom}
+                  handleWisdom={this.callWisdomAPI}
                   handleMeme={this.handleMeme}
                   wisdom={this.state.wisdom}
                   meme={this.state.meme}

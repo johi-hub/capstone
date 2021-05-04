@@ -23,6 +23,7 @@ const StruggleBot = ({ handleWisdom, handleMeme }) => {
       })
       .then((res) => {
         setBotResponse(res.data);
+        console.log(res.data);
       });
   };
   const logout = () => {
@@ -34,7 +35,7 @@ const StruggleBot = ({ handleWisdom, handleMeme }) => {
       "access.wn9965n5=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     history.push("/login");
   };
-  console.log(history);
+
   return (
     <div className="container left">
       <div className="top-container">

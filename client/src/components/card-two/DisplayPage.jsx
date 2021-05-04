@@ -1,11 +1,12 @@
 import React from "react";
 
 function DisplayPage({ wisdom, meme }) {
+  console.log(wisdom);
   return (
     <>
       <div className="container">
         <div className="wisdomText_container">
-          <h1 className="wisdomText">{wisdom[0]?.q}</h1>
+          <h1 className="wisdomText">{wisdom}</h1>
         </div>
         <img
           className="memeimg"
